@@ -11,5 +11,18 @@ functions:
     handler: handler.hello
     events:
       - http:
-          path: hello
           method: get
+          path: hello
+          
+  goodbye:
+    handler: handler.goodbye
+    events:
+      - http:
+          method: get
+          path: hello/{name}
+  hi:
+    handler: handler.hi
+    events:
+      - http:
+          method: post
+          path: hi
